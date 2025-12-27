@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faulty Calculator 💫</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right top, #ffd6ec, #d1e7ff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .calculator {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 40px;
+      width: 500px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #a83268;
+      margin-bottom: 25px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    input, select {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    button {
+      background-color: #ff66a3;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e45594;
+      transform: scale(1.03);
+    }
+
+    #ans {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #4a148c;
+      font-weight: 500;
+      min-height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2>💖 Faulty calculator 💖</h2>
+
+    <input type="number" id="Enter First number" placeholder="Enter first number">
+    
+    <select id="Enter operation">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
+    <input type="number" id="Enter second number" placeholder="Enter second number">
+    
+    <button onclick="calculate()">✨ Calculate ✨</button>
+
+    <div id="ans"></div>
+  </div>
+<script src="clac.js"></script>
+</body>
+</html>
